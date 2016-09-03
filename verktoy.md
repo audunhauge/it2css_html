@@ -78,7 +78,9 @@ sudo apt-get install nodejs
 sudo apt-get install npm
 ```
 
-Du kan nå starte node med kommandoen **nodejs**
+*windows og osx har egne installers*
+
+Du kan nå starte node med kommandoen **node** eller **nodejs**
 
 Skriptet under er en veldig enkel webserver
 ```js
