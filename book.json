@@ -1,0 +1,20 @@
+{
+    "plugins": [
+        "exercises-tmp-fixed-6",
+        "expandable-chapters",
+        "codepen"
+    ],
+    "pluginsConfig": {},
+
+
+    "variables": {
+           "t1": "TANK/t1.md"
+        ,  "t2": "TANK/t2.md"
+        ,  "t3": "TANK/t3.md"
+        ,  "tankhtml": "./tank_html.md"
+        ,  "h1": "HTML/h1.md"
+        ,  "h2": "HTML/h1.md"
+        ,  "c1": "CSS/c1.md"
+    }
+
+}

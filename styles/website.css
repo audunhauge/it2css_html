@@ -1,0 +1,12 @@
+/* CSS for website */
+
+#tank {
+  width: 130px;
+  height: 130px;
+  background-color: red;
+  transition: transform 3s;
+}
+
+#tank:hover {
+  transform: rotate(180deg);
+}
