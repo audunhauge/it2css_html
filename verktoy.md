@@ -73,5 +73,34 @@ Du kan nå koble deg til localhost:8000 og åpne filene i prosjektet.
 #### node.js
 
 For linux (ubuntu)
+```bash
+sudo apt-get install nodejs
+sudo apt-get install npm
+```
+
+Du kan nå starte node med kommandoen **nodejs**
+
+Skriptet under er en veldig enkel webserver
+```js
+// Importer http modulen som gjør det meste av arbeidet
+var http = require('http');
+
+// Definerer porten vi lytter på
+const PORT=8080; 
+
+// en funksjon som tar seg av requests
+function handleRequest(request, response){
+    response.end('It Works!! Path Hit: ' + request.url);
+}
+
+// Lag en server
+var server = http.createServer(handleRequest);
+
+// Start serveren
+server.listen(PORT, function(){
+    // denne funksjonen kjøres når serveren starter
+    console.log("Server listening on: http://localhost:%s", PORT);
+});
+```
 
 
