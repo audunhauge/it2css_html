@@ -4,6 +4,8 @@
 * [Verktøy](verktoy.md)
 * [Prosjektet tankGame](prosjektet_tankgame.md)
 * [CSS](css.md)
+   * [Versjon 1](CSS/c1.md)
+   * [Versjon 4](CSS/c4.md)
 * [HTML](html.md)
 * [Animering](animering.md)
    * [Intro-animasjon](ANIMA/ani1.md)
@@ -21,6 +23,7 @@
    * [Versjon 1](TANK/t1.md)
    * [Versjon 2](TANK/t2.md)
    * [Versjon 3](TANK/t3.md)
+   * [Versjon 4](TANK/t4.md)
 * [Bibliotek](util.md)
 * [Stikkord](GLOSSARY.md)
 
