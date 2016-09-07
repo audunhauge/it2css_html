@@ -16,10 +16,10 @@ Dermed zz("brett") framfor mittBibliotek("brett").
 
 ```js
   // Kode uten bruk av biblioteket:
-  var divBrett = document.getElementById("brett");
+  let divBrett = document.getElementById("brett");
   
   // Kode med bibliotek
-  var divBrett = zz("brett");
+  let divBrett = zz.$("brett");
 ```
 Dette er nyttig da slike oppslag i DOM (Document Object Model) forekommer
 hyppig i web-apper.
@@ -27,32 +27,35 @@ hyppig i web-apper.
 ## Bibliotek-koden
 
 ```js
-// finner et element, kan bruke "#brett", "brett", ".klasse"
-var zz = function(selector) {
-   var pre = selector.charAt(0);
-   if (pre === '#' || pre === '.') {
-     return document.querySelector(selector);
-   } else {
-     return document.getElementById(selector);
-   }
- }
 
-zz.all = document.querySelectorAll.bind(document);
+class ZZ {
 
-// nodeList er ikke array, kan ikke bruke .map
-zz.nodeMap = function(nodeList, fun) {
-  for (var i = 0; i < nodeList.length; ++i) {
-    fun(nodeList[i]); 
-  }
+    addClass(selector, klass) {
+        let elm = [...document.querySelectorAll(selector)];
+        elm.forEach(e => e.classList.add(klass));
+    }
+
+    removeClass(selector, klass) {
+        let elm = [...document.querySelectorAll(selector)];
+        elm.forEach(e => e.classList.remove(klass));
+    }
+
+    // finner et element, kan bruke "#brett", "brett", ".klasse"
+    // for nakne ord $("main") brukes getElementById
+    // ellers $("#main") vil bruke querySelector
+    $(selector) {
+        // fails for div span etc
+        if (selector.includes("#") || selector.includes(".") ) {
+            return document.querySelector(selector);
+        } else {
+            return document.getElementById(selector);
+        }
+    }
 }
 
-zz.addClass = function(selector, klass) {
-  zz.nodeMap(zz.all(selector), function(elm) {elm.classList.add(klass);});
-} 
-
-zz.removeClass = function(selector, klass) {
-  zz.nodeMap(zz.all(selector), function(elm) {elm.classList.remove(klass);});
-} 
+let zz = new ZZ();
+zz.all = document.querySelectorAll.bind(document);
+// nå er zz.all et synonym for document.querySelectorAll
 
 ```
 

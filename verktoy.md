@@ -35,10 +35,18 @@ For mac er den enkleste løsningen å installere [Postgres.app](http://postgresa
 
 For windows [installer](http://www.postgresql.org/download/windows/)
 
+For linux (ubuntu) 
+```bash
+sudo apt-get install postgresql postgresql-contrib
+sudo su - postgres
+psql
+```
+
 #### Lag en enkel database
 ```psql
 CREATE DATABASE elevdb;
-};
+CREATE user admin with password '123';
+ALTER DATABASE elevdb OWNER TO admin;
 ```
 
 #### Lag en tabell i databasen
