@@ -62,7 +62,7 @@ zz.all = document.querySelectorAll.bind(document);
 ## Codepen
 
 En demo i codepen som viser tre forskjellige måter du kan bruke
-zz(  ) funksjonen på. Klikk på JS knappen for å se koden som kjøres.
+zz.$(  ) funksjonen på. Klikk på JS knappen for å se koden som kjøres.
 
 <p data-height="268" data-theme-id="0" data-slug-hash="reMrwP" data-default-tab="result" data-user="audunhauge" class="codepen">See the Pen <a href="http://codepen.io/audunhauge/pen/reMrwP/">jQueryMINI</a> by audun hauge (<a href="http://codepen.io/audunhauge">@audunhauge</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>

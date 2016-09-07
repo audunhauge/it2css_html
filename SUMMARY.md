@@ -6,7 +6,10 @@
 * [CSS](css.md)
    * [Versjon 1](CSS/c1.md)
    * [Versjon 4](CSS/c4.md)
+   * [Versjon 5](CSS/c5.md)
 * [HTML](html.md)
+   * [Versjon 1](HTML/h1.md)
+   * [Versjon 4](HTML/h4.md)
 * [Animering](animering.md)
    * [Intro-animasjon](ANIMA/ani1.md)
 * [Skjema](skjema.md)
@@ -24,6 +27,7 @@
    * [Versjon 2](TANK/t2.md)
    * [Versjon 3](TANK/t3.md)
    * [Versjon 4](TANK/t4.md)
+   * [Versjon 5](TANK/t5.md)
 * [Bibliotek](util.md)
 * [Stikkord](GLOSSARY.md)
 
