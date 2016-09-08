@@ -175,25 +175,3 @@ I tillegg finnes
 ```
 som er mer avanserte høyere ordens funksjoner.
 Sjekk dem ut på google ... 
-
-
-{% exercise %}
-Lag en funksjon som tar en liste med tall og
-gir tilbake en ny liste hvor alle verdiene har øka med 4.
-Dvs voks4([1,2,3]) gir tilbake [5,6,7].
-Du kan gjerne bruke .map
-{% initial %}
-function voks4(arr) {
-   // din kode her
-}
-{% solution %}
-function voks4(arr) {
-  return arr.map(function(e) { return e+4; });
-}
-{% validation %}
-var tall = [1,5,3];
-var ny = voks4(tall);
-assert(ny[0] === 5);
-assert(ny[1] === 9);
-{% context %}
-{% endexercise %}

@@ -1,6 +1,5 @@
 {
     "plugins": [
-        "exercises-tmp-fixed-6",
         "expandable-chapters",
         "codepen"
     ],

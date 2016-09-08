@@ -68,29 +68,7 @@ if (betingelse) {
 }
 ```
 
-{% exercise %}
-Lag en if test som sjekker om
-veriden lagret i tall er større enn 12
-{% initial %}
-var tall = 13;
-var result;
-if (    ) {
-  result = true;
-} else {
-  result = false;
-}
-{% solution %}
-var tall = 13;
-var result;
-if (tall > 12) {
-  result = true;
-} else {
-  result = false;
-}
-{% validation %}
-assert(result);
-{% context %}
-{% endexercise %}
+
 
 
 ### Switch
