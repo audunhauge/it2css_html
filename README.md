@@ -17,4 +17,4 @@ Javscript blir gjennomgått med kapitler for variable, betingelser, uttrykk, fun
 
 Til slutt en liten oppgavesamling og forslag til prosjekt.
 
-{% include "git+https://github.com/GitbookIO/documentation.git/README.md#0.0.1" %}
+{% include "git+https://github.com/audunhauge/it2css_html/blob/dba4bb1720477c4d3c6a83c74cdd68f20288e3c9/TANK/t5.md" %}
