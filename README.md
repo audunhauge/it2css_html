@@ -16,3 +16,5 @@ Et kort kapittel om animering, hovedsakelig basert på css.
 Javscript blir gjennomgått med kapitler for variable, betingelser, uttrykk, funksjoner, array og objekter.
 
 Til slutt en liten oppgavesamling og forslag til prosjekt.
+
+{% include "git+https://github.com/GitbookIO/documentation.git/README.md#0.0.1" %}
