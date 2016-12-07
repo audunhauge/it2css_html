@@ -4,7 +4,7 @@
 Tabeller (array) og strenger (string) kan lagre samlinger av data. En tabell brukes ofte til å lagre lister med like data.
 Anta at vi lager en tabell i javascript slik:
 ```javascript
-var elevTabell = [ "Ole","Per","Kari", "Lise","Lars","Oda" ];
+let elevTabell = [ "Ole","Per","Kari", "Lise","Lars","Oda" ];
 ```
 
 Da kan du se for deg at tabellen ser slik ut:
@@ -60,12 +60,19 @@ Vi har tabellen elevTabell som vi nå ønsker å skrive ut
 
 For å skrive ut alle elementene i tabellen bruker vi en løkke:
 ```javascript
-var elevTabell = [ "Ole","Per","Kari","Lise","Lars","Oda" ];
-var it;  // løkketelleren
-var ant = elevTabell.length;  // antall elementer
+let elevTabell = [ "Ole","Per","Kari","Lise","Lars","Oda" ];
+let it;  // løkketelleren
+let ant = elevTabell.length;  // antall elementer
 for (i = 0; i < ant; i++) {
    console.log(elevTabell[i]);
-}```
+}
+
+// du kan også bruke denne metoden (es2016)
+for (let elev of elevTabell) {
+  console.log(elev);
+}
+// i denne løkka tilsvarer elev elevTabell[i]
+```
 
 
 Her ser vi at alle Tabeller (arrays) har en innebygd egenskap med navnet length som gir deg antall elementer i tabellen.
@@ -92,7 +99,7 @@ Flerdimensjonale tabeller
 Tenk deg at du skal lage et sudoku brett. Brettet er 9 x 9 ruter. 
 Du ønsker å bruke en array til å lagre brettet.
 ```js
-var Brett = [
+let Brett = [
   [ 0,0,0,0,0,0,0,0,0 ],
   [ 0,0,0,0,0,0,0,0,0 ],
   [ 0,0,0,0,0,0,0,0,0 ],
@@ -121,7 +128,7 @@ En mye brukt teknikk er å lage en tabell som inneholder objekter .
 Et objekt kan for eksempel være informasjon om en elev.
 Vi kan da lage en tabell med info om elever slik:
 ```js
-var arrElever = [
+let arrElever = [
   { fornavn:"Ole", etternavn:"Olsen", klasse:"3A", poeng:20 },
   { fornavn:"Lise", etternavn:"Larsen", klasse:"3A", poeng:22 },
   { fornavn:"Lars", etternavn:"Nilsen", klasse:"3B", poeng:21 }
