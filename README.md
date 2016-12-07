@@ -19,6 +19,6 @@ Til slutt en liten oppgavesamling og forslag til prosjekt.
 
 ## heading
 
-```js
+<pre>
 {% include "git+https://github.com/audunhauge/TankGame.git/app.js" %}
-```
+</pre>
