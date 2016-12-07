@@ -8,9 +8,12 @@ En typisk løsning er vist under:
 
 ```html
 <form>
-  <br><label> Skriv inn navn <input type="text" placeholder="fornavn etternavn"></label>
-  <br><label> Skriv inn alder <input type="number" min=12 max=90></label>
-  <br><label> Skriv inn dato <input type="date"></label>
+  <br><label> Skriv inn navn 
+              <input type="text" placeholder="fornavn etternavn"></label>
+  <br><label> Skriv inn alder 
+              <input type="number" min=12 max=90></label>
+  <br><label> Skriv inn dato 
+              <input type="date"></label>
   <br>
   <br><button type="button">Lagre</button>
 </form>
@@ -59,10 +62,10 @@ I js kan du lage en variabel som vist under:
   let inpFornavn = document.getElementById("fornavn");
   let fornavn = inpFornavn.value;
 ```
-Denn koden plukker ut det brukeren skriver og lagrer det i variabelen
+Denne koden plukker ut det brukeren skriver og lagrer det i variabelen
  __fornavn__.
 
-Varianter av denne er type="number,email,password"
+Varianter er type="number,email,password"
 
 Andre varianter er "color,date" som har egne visninger (color-picker og calendar)
 ```html
