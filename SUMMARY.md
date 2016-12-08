@@ -28,6 +28,7 @@
    * [Versjon 3](TANK/t3.md)
    * [Versjon 4](TANK/t4.md)
    * [Versjon 5](TANK/t5.md)
+   * [Resten](TANK/t6.md)
 * [Bibliotek](util.md)
 * [Stikkord](GLOSSARY.md)
 
