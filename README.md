@@ -21,6 +21,6 @@ Til slutt en liten oppgavesamling og forslag til prosjekt.
 
 <pre>
 <code class="lang-js">
-{% include "git+https://github.com/audunhauge/TankGame.git/app.js" %}
+{% include "git+https://github.com/audunhauge/TankGame.git/app.js#v0.8" %}
 </code>
 </pre>
