@@ -63,52 +63,39 @@ elever.push(elev);
 
 Denne klassen skal vi bruke i spillet vi lager.
 
+Merk at klassen har en construktor funksjon. Det er denne funksjonen som kjøres
+når du lager en ny instans av klassen.
 ```js
-const MAXSPEED = 23;
-const TURN = 3;
-const FIREWAIT = 6;
-const AKS = 2;
-
-class Tank {
-  constructor(id, x, y, color) {
-    this.id = id;
-    this.color = color;
-    this.alive = true;
-    this.magazin = 20;
-    this.maxhealth = 100;
-    this.hitpoints = 100;
-    this.speed = MAXSPEED;
-    this.turnrate = TURN;     // hvor mange grader/tidsenhet kan tanken rotere
-    this.v = 0;               // fart
-    this.a = AKS              // akselerasjon
-    this.x = x;               // plassering på skjermen
-    this.y = y;         
-    this.w = 20;              // bredde
-    this.h = 32;              // høyde
-    this.rot = 0;             // rotasjon - retning tanken peker
-    this.firewait = FIREWAIT;
-    this.fired = 0;           // cooldown for fire-rate
-    this.div = document.createElement('div');
-    this.div.classList.add('tank');
-    this.div.classList.add(color);
-  }
-  
-  // slik at vi kan spørre if (obj.is("tank"))
-  // alle kolliderbare ting i spillet kan svare på dette spørsmålet
-  is(t) { return t === 'tank'};
-  
-  // påfør denne tanken skade, den blir treigere
-  // merk at hitpoints endres ikke her
-  hurt() {
-    this.firewait += 2;
-    this.turnrate *= 0.9;
-    this.speed *= 0.9
-  }
-}
-
-// Nå bruker vi klassen til å lage en ny tanks 
-// og legger den ut på spillebrettet
-var t = new Tank("t1",10,10,"red");
-document.getElementById("game").appendChild(t.div);
+let t34 = new Tank("t"+tankcount, "active");
 ```
+
+Merk også måten du lager funksjoner som er knytta til en klasse
+```js
+  hit(klass) {
+    return 5;
+  }
+```
+
+Dette betyr at du kan skrive t32.hit() for å kjøre denne funksjonen.
+I alle slike funksjoner definert inne i klassen vil **this** referere
+til instansen (t34 i vårt eksempel).
+
+Dermed kan vi skrive en klassefunksjon som dette
+```js
+  move(delta) {
+    if (this.alive) {
+      this.body.move(delta);
+      this.setpos();
+    }
+  }
+```
+**this** er her tanksen som vi kjører koden på, f.eks t34.move(5)
+
+
+<pre>
+<code class="lang-js">
+{% include "git+https://github.com/audunhauge/TankGame.git/Tank.js#v0.8" %}
+</code>
+</pre>
+
 
