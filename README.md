@@ -22,14 +22,14 @@ Til slutt en liten oppgavesamling og forslag til prosjekt.
 ### versjon 0.8
 <pre>
 <code class="lang-js">
-{% include "git+https://github.com/audunhauge/TankGame.git/app.js#v0.8" %}
+{% include "git+https://github.com/audunhauge/TankGame.git/game.js#v0.8" %}
 </code>
 </pre>
 
 ### versjon 0.5
 <pre>
 <code class="lang-js">
-{% include "git+https://github.com/audunhauge/TankGame.git/app.js#v0.5" %}
+{% include "git+https://github.com/audunhauge/TankGame.git/game.js#v0.5" %}
 </code>
 </pre>
 
