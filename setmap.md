@@ -71,7 +71,7 @@ Map har nesten de samme funksjonene som set, men har noen i tillegg
 |* map.delete(key)                |Fjerner verdien som er lagra på plass [key] fra set/map
 |* map.values()                   | Gir tilbake en liste over verdiene som er lagra i map/set
 |* map.has(key)                   | Sann dersom map/set har en verdi på plass [key], ellers usann
-|* map.forEach( cb )              | Kjører funksjonen cb(value,set) / cb(value,key,map) for alle elementer lagra i set/map
+|* map.forEach(cb)              | Kjører funksjonen cb(value,set) / cb(value,key,map) for alle elementer lagra i set/map
 
 De funksjonen markert med stjerne kan også brukes på Set.
 
