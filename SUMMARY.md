@@ -20,6 +20,7 @@
 * [Funksjoner](funksjoner.md)
 * [Array](array.md)
 * [Objekter](objekter.md)
+* [Map og Set](setmap.md)
 * [Klasser](klasser.md)
 * [Praktiske Eksempler](praktisk.md)
 * [TankGame](tankgame.md)
