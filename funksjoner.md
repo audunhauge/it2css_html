@@ -70,6 +70,65 @@ av typen Number som returneres.
 
 Denne måten å dokumentere en funksjon på er basert på [jsdoc](http://usejsdoc.org/about-getting-started.html).
 
+
+## Anonyme funksjoner og arrow funksjoner
+
+Du kan også lage funksjoner som ikke blir tildelt et navn.
+```javascript
+btnBeregn.addEventListener("click", function(e) {
+  // utfør beregning
+})
+```
+Denne typen kalles anonyme funksjoner og kan også brukes til å kjøre 
+kode med en gang uten å ta vare på funksjonen. Den kan dermed ikke kjøres
+omigjen ved et uhell (da den ikke lenger finnes).
+
+```javascript
+function() {
+  let a = 12;  // denne forsvinner etter funksjonen er ferdig 
+  // mer kode som kjøres ved oppstart
+
+}();
+```
+**Merk** de to parantesene til slutt **()** . 
+De vil aktivere den anonyme funksjonen og kjører koden, deretter er funksjonen borte.
+Dette kan være nyttig ved oppstart av et spill/app.
+
+## Arrow funksjoner
+
+En arrow funksjon defineres slik:
+
+```javascript
+let  f = e => e + 1;
+// f(2) === 3
+```
+Den er en forenkla skrivemåte for anonyme funksjoner (med en del endra egenskaper).
+
+```javascript
+btnBeregn.addEventListener("click", e => { /* kode */  } );
+// tillsvarer den anonyme funksjonen for btnBeregn vist tidligere
+
+tall.sort( (x,y) => x - y );
+// merk at du ikke trenger return dersom du ikke bruker {} rundt funksjoneskroppen
+// tillsvarer tall.sort(function(x,y) { return x - y;})
+```
+
+Arrow funksjoner binder ikke **this**.
+Dermed vil **this** være definert av scopet hvor arrow funksjonen defineres.
+Dette er ofte ønskelig for eksempler som under:
+```javascript
+class Person {
+  constructor(age) {
+    this.age = age;
+    setInterval( () => this.age++,1000);
+  }
+}
+
+var p = new Person(0);
+p.age;  // 12
+p.age;  // 16  -- alder øker med 1 for hvert sekund
+```
+
 ## Bruke funksjoner
 
 Dersom du har definert en funksjon selv eller ønsker å bruke en som er ferdig definert i javascript, så er metoden den samme:

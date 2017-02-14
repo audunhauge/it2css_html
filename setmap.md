@@ -79,8 +79,7 @@ Set har i tillegg funksjonen **set.add(verdi)**  som legger en verdi inn i sette
 
 
 # Array funksjoner på Set og Map
- ikke har en bestemt orden.
-()
+
 Array har mange nyttige innebygde funksjoner slik som
 
 map, filter, sort, reverse
@@ -96,8 +95,8 @@ Disse kan ikke brukes direkte på map og set, men metodene under viser mulige l�
 const set = new Set([1, 2, 3]);
 set = new Set([...set].map(x => x * 2));
 // Resulting Set: {2, 4, 6}
-// Filtering:
 
+// Filtering:
 const set = new Set([1, 2, 3, 4, 5]);
 set = new Set([...set].filter(x => (x % 2) == 0));
 // Resulting Set: {2, 4}

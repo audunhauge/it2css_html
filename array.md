@@ -135,3 +135,99 @@ let arrElever = [
 ];
 ```
 
+# Array funksjoner
+
+## Funksjoner som endrer verdiene i arrayet
+
+```js
+let a = [1,12,4,5,612,44,55,121212];
+
+// sorter a alfabetisk ('1' > '12')
+a.sort();  // a === [ 1,12,,121212,4,44,5,55,612]
+
+// sorter a numerisk
+a.sort( (x,y) => x - y ); // a === [1, 4, 5, 12, 44, 55, 612, 121212]
+
+// sorter a numerisk synkende
+a.sort( (x,y) => y - x ); // a === [121212, 612, 55, 44, 12, 5, 4, 1]
+
+// reverser a 
+a.reverse();  // a === [121212, 55, 44, 612, 5, 4, 12, 1]
+
+```
+
+## Funksjoner som gir en ny array som resultat
+```js
+
+// største tall i a 
+let maksimum = Math.max(...a);  // 121212
+// minste tall i a 
+let minimum = Math.min(...a);  // 1
+
+// summen av tallene i a 
+let total = a.reduce( (sum,v) => sum + v, 0);  // den siste nullen er startverdien for sum
+// v vil få verdien til tallene i a i sekvens
+
+// endre tallene i a med et uttrykk/funksjon 
+let b = a.map( e => 2 *  e + 4);
+// b === [6, 28, 12, 14, 1228, 92, 114, 242428]
+
+// filtrer tallene i a 
+let c = a.filter( e => e % 2 === 0);
+// c === [12, 4, 612, 44, 121212]
+
+// test om alle tallene i a oppfyller en betingelse
+let barePositive = a.every( e => e > 0);
+// barePositive === true , fordi alle tall i a er > 0
+
+```
+
+## En innebygd travasering av array-elementer
+```js
+
+// utfør en funksjon for hver verdi i a 
+a.forEach(doit);
+
+function doit(verdi, index) {
+  // verdi vil være tallene fra a i sekvens
+  // index vil være posisjonen verdi har i a (tilsvarer løkkeindeks).
+}
+
+```
+
+
+## Sortere elementer med egenskaper
+Du kan også sortere array som inneholder objekter.
+
+```js
+class Elev {
+  constructor(fornavn,etternavn,klasse) {
+    this.fornavn = fornavn;
+    this.etternavn = etternavn;
+    this.klasse = klasse;
+  }
+}
+
+let elever = [];
+elever.push(new Elev("ole","olsen","3a") );
+elever.push(new Elev("kar","olsen","3a") );
+elever.push(new Elev("lasse","olsen","3a") );
+elever.push(new Elev("lise","olsen","3a") );
+
+elever.sort( (x,y) => +(x.fornavn > y.fornavn) || +(x.fornavn === y.fornavn) - 1 );
+// her sortereres det på fornavn a..z
+
+// denne gjør det samme, men det er litt lettere å se hva som skjer
+elever.sort( (x,y) => {
+  if (x.fornavn > y.fornavn) return 1;
+  if (x.fornavn === y.fornavn) return 0;
+  return -1;
+} );
+
+// merk at alle funksjoner gitt til sort skal returnere 1,0,-1
+// henholdsvis dersom større,lik,mindre
+// for sammeligningen mellom x og y 
+
+
+```
+
