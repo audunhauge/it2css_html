@@ -101,7 +101,24 @@ En arrow funksjon defineres slik:
 ```javascript
 let  f = e => e + 1;
 // f(2) === 3
+let skalar = (u,v) => u.x * v.x * + u.y * v.y + u.z * v.z;
+let kryss = (u,v) => [u.y * v.z - u.z * v.y  ,  u.z * v.x - u.x * v.z  ,  u.x * v.y - u.y * v.x];
+let sin = x => { return x - x²/2 + x³/6;}
+let cos = (x) => { return Math.cos(x); }
 ```
+Merk at du trenger paranteser rundt parameterlista dersom den er tom eller har fler enn 1 parameter.
+Dersom funksjonskroppen bare er et uttrykk - da slipper du skrive **return** eksplisitt.
+Dersom du bruker { } rundt kroppen - da må du skrive return for å gi tilbake en verdi.
+
+```javascript
+  ( )  =>  12;            // en arrow func uten parameter, returnerer 12 som verdi
+   x   =>  x * x;         // bare en parameter, slipper parantes
+  (x)  =>  x*x+2;         // du kan bruke parantes dersom du ønsker det selv med 1 parameter
+ (x,y) =>  x*x + y*y;     // her må du ha paranteser
+ (a,b) => { return a+b;}  // når du bruker { } rundt kroppen MÅ du skrive return
+```
+
+
 Den er en forenkla skrivemåte for anonyme funksjoner (med en del endra egenskaper).
 
 ```javascript
@@ -121,6 +138,7 @@ class Person {
   constructor(age) {
     this.age = age;
     setInterval( () => this.age++,1000);
+    // i arrow funksjonen vil this være Person sin this
   }
 }
 
@@ -128,6 +146,25 @@ var p = new Person(0);
 p.age;  // 12
 p.age;  // 16  -- alder øker med 1 for hvert sekund
 ```
+
+Uten arrow funksjon er dette ikke så rett fram
+```javascript
+this.age = 100;   // den globale this får egenskapen age
+class Menneske {
+  constructor(age) {
+    this.age = age;
+    setInterval( function() {this.age++;},1000);
+    // den globale this.age øker for hvert sekund
+  }
+}
+
+var m = new menneske(40);
+m.age;  // 40
+m.age;  // 40 .. m.age endrer seg ikke
+this.age; // 156   ... this.age øker for hvert sekund
+```
+Her vil funksjonen i setIntervall bruke en this som er kobla til det globale skopet
+Dermed vil m.age ikke endres.
 
 ## Bruke funksjoner
 
@@ -141,14 +178,17 @@ Du kjører koden som funksjonen representerer (kroppen til funksjonen) ved å ne
 Dersom funksjonen tar parametre sendes disse i parentesene etter funksjonsnavnet - slik som sinus-funksjonen:
 
 ```javascript 
-var y = sin(1.23);```
+var y = sin(1.23);
+```
 
 Verdien du sender kan være et tall (slik som over) eller en variabel.
 Dersom du bruker en variabel, da hentes verdien ut og sendes til funksjonen -
 som om du hadde skrevet det tallet som er lagra i variabelen.
+
 ```javascript
 var x = 1.23;
-var y = sin(x);  // tilsvarer sin(1.23)```
+var y = sin(x);  // tilsvarer sin(1.23)
+```
 
 Dette har samme effekt som om du skrev ``` y = sin(1.23)``` siden x inneholder tallet 1.23.
 
