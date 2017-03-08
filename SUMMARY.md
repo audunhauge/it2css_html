@@ -22,6 +22,7 @@
 * [Objekter](objekter.md)
 * [Map og Set](setmap.md)
 * [Klasser](klasser.md)
+* [WEBAAPI](webaapi.md)
 * [Praktiske Eksempler](praktisk.md)
 * [TankGame](tankgame.md)
    * [Versjon 1](TANK/t1.md)
