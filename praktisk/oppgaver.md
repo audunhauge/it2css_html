@@ -12,20 +12,20 @@ Legg inn følgende innhold i body:
         <button type="button" class="mybutton" id="next_year"> &gt; </button>
         <button type="button" class="mybutton" id="prev_month"> &lt; </button>
         <button type="button" class="mybutton" id="next_month"> &gt; </button>
-        
+
         <!-- text display -->
         <div class="mytext" id="year">2015</div>        
         <div class="mytext" id="month">oktober</div>
-        
+
         <!-- navn paa ukedager -->
         <div id="ukedager"></div>
-        
+
         <!-- rammen rundt datoer (1..31) -->
         <div id="datoer"></div>
-        
+
         <!-- en liten editor -->
         <div id="tinyed"></div>
-        
+
         <script>
             // start script som tegner calendar
             setup();
@@ -39,23 +39,23 @@ I kalender.css skal du lage regler slik at du får dette utseendet \(bare knappe
 Grovstruktur på setup() {
    lag ref til elementer i html
    legg til eventlisteners (knappene)
-   
+
    løkke som lager navn på ukedager
    løkke som legger inn 7*6=42 DIVer for datoer
-   
+
    function visKalender(y,m,d) {
      se egen pseudo
    }
-   
+
    // kobla til eventlisteners
    function nextYear(e) { }
    function prevYear(e) { }
    function nextMonth(e) { }
    function prevMonth(e) { }
- } 
+ }
 ```
 
-Lag en enkel `function visKalender(y,m,d) ` som bare oppdaterer årstallet og navnet på måned.
+Lag en enkel `function visKalender(y,m,d)` som bare oppdaterer årstallet og navnet på måned.
 
 ```
 pseudokode visKalender(y,m,d)
@@ -80,6 +80,17 @@ Gjør det samme for de to neste knappene \(de skal endre måned\)
 
 I setup skal du legge til en for løkke som limer inn navn på ukene.  
 Hvert navn-på-dag skal lages som en div med klassen **dag**.
+
+```
+la divDagnavn være ref til div hvor dager skal vises
+la dagnavn = "Ma,Ti,On ... ".split(",")
+for let dag of dagnavn
+  la div = document createElement  div
+  div className = "dag"
+  div indre html = dag  // variabelen dag
+  divDagnavn append barn (div)
+  
+```
 
 Lag en tilsvarende løkke som legger inn 42 div-er som skal vise dato \(1..31\).  
 Vi trenger 42 slik at vi har plass til å vise måneder som har den 1st på Søndag.
