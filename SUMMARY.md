@@ -34,4 +34,6 @@
   * [Resten](TANK/t6.md)
 * [Bibliotek](util.md)
 * [Stikkord](GLOSSARY.md)
+* [Oppgaver](oppgaver.md)
+  * [Kalender](oppgaver/kalender.md)
 
