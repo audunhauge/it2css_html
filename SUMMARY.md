@@ -36,4 +36,5 @@
 * [Stikkord](GLOSSARY.md)
 * [Oppgaver](oppgaver.md)
   * [Kalender](oppgaver/kalender.md)
-
+* [Eksamensoppgaver](eksamensoppgaver.md)
+  * [Vår 2015](eksamensoppgaver/var-2015.md)
