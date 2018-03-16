@@ -23,6 +23,7 @@
 * [Map og Set](setmap.md)
 * [Klasser](klasser.md)
 * [WEBAAPI](webaapi.md)
+* [Videoredigering i Blender](videoredigering-i-blender.md)
 * [Praktiske Eksempler](praktisk.md)
   * [Oppgaver](praktisk/oppgaver.md)
 * [TankGame](tankgame.md)
@@ -38,3 +39,4 @@
   * [Kalender](oppgaver/kalender.md)
 * [Eksamensoppgaver](eksamensoppgaver.md)
   * [Vår 2015](eksamensoppgaver/var-2015.md)
+
