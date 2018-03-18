@@ -33,13 +33,12 @@ Størrelsen kan du sette under **Dimensions** : gi X og Y verdier \(bredde, høy
 På samme plass kan du endre start- og slutt-frame.
 
 Velg **Render** - **Render** **Animation** fra menyen \(menylinja for Blender\).  
-Vent den tida det tar ... \(det går raskt dersom du velger liten størrelse f.eks 500x500\).  
-
+Vent den tida det tar ... \(det går raskt dersom du velger liten størrelse f.eks 500x500\).
 
 Etterpå kan du bruke ffmpeg til å konvertere til ønska format:
 
 ```
- ffmpeg -i senterpartiet.mkv -f mp4 senter.mp4
+ ffmpeg -i senterpartiet.mkv -f mp4 sp.mp4
 ```
 
 \( ffmpeg finnes for linux, osx og windows, har bare testa på linux selv\).
