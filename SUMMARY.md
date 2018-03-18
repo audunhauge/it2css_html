@@ -39,4 +39,5 @@
   * [Kalender](oppgaver/kalender.md)
 * [Eksamensoppgaver](eksamensoppgaver.md)
   * [Vår 2015](eksamensoppgaver/var-2015.md)
+  * [Vår 2017](eksamensoppgaver/var-2017.md)
 
