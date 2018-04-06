@@ -28,7 +28,7 @@ Mens lydsporet fortsatt er valgt kan du gå inn på Properties \(panel øverst t
 Åpne **Encoding** og rull ned til du ser **Audio Codec ** - denne er i utgangspunktet satt til **None**, skift til **mp3**.
 
 Velg hvor du vil lagre filmen:  **Output** rett over **Encoding** - skriv inn mappe \(f.eks Users/audun/Documents \).  
-Velg hvilken type codec du vil bruke \(litt avhengig av hva du har på maskinen - jeg brukte ffmpeg\).  
+Velg hvilken type **codec** du vil bruke \(litt avhengig av hva du har på maskinen - jeg brukte **ffmpeg**\).  
 Størrelsen kan du sette under **Dimensions** : gi X og Y verdier \(bredde, høyde\).  
 På samme plass kan du endre start- og slutt-frame.
 
