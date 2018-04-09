@@ -41,5 +41,15 @@ Etterpå kan du bruke ffmpeg til å konvertere til ønska format:
  ffmpeg -i senterpartiet.mkv -f mp4 sp.mp4
 ```
 
-\( ffmpeg finnes for linux, osx og windows, har bare testa på linux selv\).
+Søk opp ffmpeg på nett, last ned versjon som passer for ditt system \(velg disk image for mac\).  
+På mac må du flytte ffmpeg inn i Applications mappa \(Programmer\).  
+Du må også godkjenne kjøring da den er fra en ukjent \(for apple\) utgiver.
+
+For å bruke programmet på mac må du:
+
+* åpne terminal
+* cd til mappa hvor filen ligger  \( cd Documents/mappa/di \)
+* kjøre kommandoen:  /Applications/ffmpeg -i  filnavnet.mkv -f mp4 nyttFilnavn.mp4
+
+
 
